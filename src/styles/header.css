@@ -51,6 +51,13 @@ ul { list-style: none; }
   padding: var(--topbar-h) var(--header-padding-x) 0 var(--header-padding-x);
 }
 
+/* Disable sticky on desktop */
+@media (min-width: 769px) {
+  .site-header {
+    position: relative;
+    top: auto;
+  }
+}
 .nav-container {
   display: flex;
   justify-content: space-between;

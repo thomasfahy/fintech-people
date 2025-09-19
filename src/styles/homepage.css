@@ -116,6 +116,7 @@
   display: flex;
   gap: 1.5rem;
   overflow: hidden; /* hide scroll */
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   flex: 1;
 }
@@ -124,6 +125,7 @@
   flex: 0 0 calc(25% - 1.2rem);
   background: #f9f9fb;
   border: 1px solid #ececf2;
+  scroll-snap-align: start;
   border-radius: 12px;
   padding: 1.5rem;
   display: flex;
