@@ -65,33 +65,17 @@ function injectHeader() {
 
   const headerHTML = `
     <header class="site-header">
-      <div class="contact-number-container">
-          <img src="${phoneIcon}" alt="" class="phone-icon" aria-hidden="true">
-          <span><a href="tel:${phoneNumber}">${phoneNumber.replace(/(\d{5})(\d{6})/, "$1 $2")}</a></span>
-      </div>
       <nav class="nav-container">
         <div class="logo">
           <a href="index.html">
             <img src="${logo}" alt="${logoAlt}">
           </a>
         </div>
-        <div class="header-contact">
-          <div class="social-icons">
-            <a href="${facebookUrl}" target="_blank">
-              <img class="social-link" src="${fbIcon}" alt="Facebook" aria-hidden="true">
-            </a>
-            <a href="${instagramUrl}" target="_blank">
-              <img class="social-link" src="${igIcon}" alt="Instagram" aria-hidden="true">
-            </a>
-          </div>
-        </div>
         <ul class="nav-links">
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-          <li><a href="#">Link 4</a></li>
-          <li><a href="#">Link 5</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Join Us</a></li>
+          <li><a href="#">Candidates</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact Us</a></li>
         </ul>
       </nav>
     </header>
