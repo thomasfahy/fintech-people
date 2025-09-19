@@ -98,11 +98,10 @@ function injectFooter() {
   if (document.querySelector('.site-footer')) return; // avoid duplicate injection
 
   // 🔧 Customer-specific variables
-  const phoneNumber   = "07777 777666";
-  const email         = "leecreasey@chimlees.co.uk";
-  const address       = "Mayfield, United Kingdom, Tn206dh";
+  const email         = "Placeholder@email.com";
+  const address       = "Tunbridge Wells";
   const serviceArea   = "East Sussex · Kent";
-  const brandName     = "ChimLees Ltd.";
+  const brandName     = "FinTech People Ltd";
   const privacyUrl    = "/privacy-policy.html";
   const copyrightYear = new Date().getFullYear();
   const creditName    = "Fahy Digital";
@@ -114,7 +113,6 @@ function injectFooter() {
         <div class="footer-block">
           <h4>Contact</h4>
           <ul class="footer-list">
-            <li><a href="tel:${phoneNumber}">${phoneNumber}</a></li>
             <li><a href="mailto:${email}">${email}</a></li>
           </ul>
         </div>
