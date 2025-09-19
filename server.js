@@ -70,5 +70,73 @@ app.listen(3001, () => {
 });
 
 
+// ============================ DASHBOARD =================================
+// Get jobs with optional active filter
+app.get("/api/admin/jobs", (req, res) => {
+  const { active } = req.query; // ?active=true or ?active=false
+  let sql = "SELECT * FROM job_listings";
+  const params = [];
+
+  if (active === "true") {
+    sql += " WHERE is_active = TRUE";
+  } else if (active === "false") {
+    sql += " WHERE is_active = FALSE";
+  }
+
+  sql += " ORDER BY posted_at DESC";
+
+  db.query(sql, params, (err, results) => {
+    if (err) {
+      console.error("Error fetching jobs:", err);
+      return res.status(500).json({ error: "Database error" });
+    }
+    res.json(results);
+  });
+});
+
+// Add a new job
+app.post("/api/admin/jobs", (req, res) => {
+  const { title, location, job_type, description, requirements, salary_range } = req.body;
+  const sql = `
+    INSERT INTO job_listings (title, location, job_type, description, requirements, salary_range)
+    VALUES (?, ?, ?, ?, ?, ?)
+  `;
+  db.query(sql, [title, location, job_type, description, requirements, salary_range], (err, result) => {
+    if (err) {
+      console.error("Error adding job:", err);
+      return res.status(500).json({ error: "Database error" });
+    }
+    res.json({ id: result.insertId, message: "Job added successfully" });
+  });
+});
+
+// Mark job inactive (soft delete)
+app.patch("/api/admin/jobs/:id/inactive", (req, res) => {
+  const { id } = req.params;
+  const sql = "UPDATE job_listings SET is_active = FALSE WHERE id = ?";
+  db.query(sql, [id], (err, result) => {
+    if (err) {
+      console.error("Error updating job:", err);
+      return res.status(500).json({ error: "Database error" });
+    }
+    res.json({ message: "Job marked as inactive" });
+  });
+});
+
+// Delete job (hard delete if you really want it gone)
+app.delete("/api/admin/jobs/:id", (req, res) => {
+  const { id } = req.params;
+  const sql = "DELETE FROM job_listings WHERE id = ?";
+  db.query(sql, [id], (err, result) => {
+    if (err) {
+      console.error("Error deleting job:", err);
+      return res.status(500).json({ error: "Database error" });
+    }
+    res.json({ message: "Job deleted successfully" });
+  });
+});
+
+
+
 
 module.exports = app;

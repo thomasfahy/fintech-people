@@ -1,0 +1,151 @@
+:root {
+  --brand-primary: #DD20C6;
+  --brand-primary-600: #C017AD;
+  --brand-secondary: #000000;
+  --text-strong: #0B1220;
+  --text-muted: #3E4B63;
+
+  --bg-light: #f9f9fb;
+  --border-color: #ececf2;
+  --danger: #e63946;
+}
+
+/* Dashboard Container */
+.dashboard {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 24px;
+}
+
+.dashboard h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-strong);
+}
+
+/* Filters + Add Button */
+.dashboard-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dashboard-filters label {
+  font-size: 0.95rem;
+  color: var(--text-strong);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dashboard-filters input[type="checkbox"] {
+  accent-color: var(--brand-primary);
+  width: 16px;
+  height: 16px;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.55rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--brand-primary);
+  color: #fff;
+  border: 1px solid var(--brand-primary);
+}
+.btn-primary:hover {
+  background: var(--brand-primary-600);
+  border-color: var(--brand-primary-600);
+}
+
+.btn-secondary {
+  background: #fff;
+  color: var(--text-strong);
+  border: 1px solid var(--border-color);
+}
+.btn-secondary:hover {
+  background: var(--bg-light);
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+  border: 1px solid var(--danger);
+}
+.btn-danger:hover {
+  opacity: 0.9;
+}
+
+/* Table */
+.job-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.job-table th,
+.job-table td {
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.job-table th {
+  background: var(--bg-light);
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.job-table tr:last-child td {
+  border-bottom: none;
+}
+
+.job-table td {
+  color: var(--text-muted);
+}
+
+.job-table td:nth-child(1) {
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.job-table td:nth-child(4) {
+  font-weight: 500;
+}
+
+.job-table td button {
+  margin-right: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .job-table th:nth-child(2),
+  .job-table td:nth-child(2),
+  .job-table th:nth-child(3),
+  .job-table td:nth-child(3) {
+    display: none; /* hide location and type on small screens */
+  }
+
+  .dashboard-filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
