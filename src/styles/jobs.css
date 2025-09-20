@@ -1,0 +1,108 @@
+:root {
+  --brand-primary: #DD20C6;
+  --brand-primary-600: #C017AD;
+  --text-strong: #000000;
+  --text-muted: #3E4B63;
+  --card-bg: #f9f9fb;
+  --card-border: #ececf2;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: var(--text-strong);
+}
+
+.jobs-header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px 40px;
+  text-align: center;
+}
+
+.jobs-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.jobs-header p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.job-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.job-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 .6rem 0;
+  color: var(--text-strong);
+}
+
+.job-meta {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--brand-primary);
+  margin-bottom: .8rem;
+}
+
+.job-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 0.7rem;
+  margin-left: 20%;
+  width: 60%;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #fff;
+  border: 1px solid #000000;
+  color: #000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.btn:hover {
+  background: var(--brand-primary);
+  color: #fff;
+  border: 2px solid var(--brand-secondary);
+  transform: translateY(-2px) scale(1.02);
+}
+

@@ -24,7 +24,8 @@ module.exports = {
     contact: "./src/scripts/contact.js",
     dashboard: "./src/scripts/dashboard.js",
     candidates: "./src/scripts/candidates.js",
-    jobListing: "./src/scripts/job-listing.js"
+    jobListing: "./src/scripts/job-listing.js",
+    jobs: "./src/scripts/jobs.js",
   },
   output: {
     filename: "[name].js",
@@ -64,6 +65,11 @@ module.exports = {
       template: "./src/pages/candidates.html",
       chunks: ["htmlHead", "candidates"],
       filename: "candidates.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/jobs.html",
+      chunks: ["htmlHead", "jobs"],
+      filename: "jobs.html",
     }),
 
     ...generateJobHtmlPlugins()

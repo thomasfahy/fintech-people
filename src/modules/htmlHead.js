@@ -67,7 +67,7 @@ function injectHeader() {
     <header class="site-header">
       <nav class="nav-container">
         <div class="logo">
-          <a href="index.html">
+          <a href="/">
             <img src="${logo}" alt="${logoAlt}">
           </a>
         </div>
@@ -81,7 +81,7 @@ function injectHeader() {
 
         <ul class="nav-links">
           <li><a href="/">Home</a></li>
-          <li><a href="#">Jobs</a></li>
+          <li><a href="/jobs.html">Jobs</a></li>
           <li><a href="/candidates.html">Candidates</a></li>
           <li><a href="#">Clients</a></li>
           <li><a href="/contact.html">Contact Us</a></li>
