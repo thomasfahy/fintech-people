@@ -71,6 +71,14 @@ function injectHeader() {
             <img src="${logo}" alt="${logoAlt}">
           </a>
         </div>
+
+        <!-- Hamburger Icon (only visible on mobile) -->
+        <div class="menu-toggle" id="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
         <ul class="nav-links">
           <li><a href="#">Join Us</a></li>
           <li><a href="/candidates.html">Candidates</a></li>

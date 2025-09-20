@@ -9,6 +9,7 @@ module.exports = {
     htmlHead: "./src/modules/htmlHead.js",
     contact: "./src/scripts/contact.js",
     dashboard: "./src/scripts/dashboard.js",
+    candidates: "./src/scripts/candidates.js"
     },
   output: {
     filename: "[name].js",
@@ -46,7 +47,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/candidates.html",
-      chunks: ["htmlHead"],
+      chunks: ["htmlHead", "candidates"],
       filename: "candidates.html",
     }),
   ],
