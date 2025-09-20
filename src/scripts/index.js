@@ -22,14 +22,17 @@ function loadJobs() {
           <h3>${job.title}</h3>
           <p class="job-meta">${job.location} · ${job.job_type}</p>
           <p class="job-desc">${job.description.substring(0, 120)}...</p>
-          <a href="#" class="btn btn-secondary">View Job</a>
+          <a href="/jobs/${job.id}.html" class="btn btn-secondary">View Listing</a>
         `;
 
         carousel.appendChild(card);
       });
+
+      updateCardsReference();
     })
     .catch(err => console.error("Error fetching jobs:", err));
 }
+
 
 loadJobs();
 
