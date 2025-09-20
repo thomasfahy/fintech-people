@@ -7,51 +7,15 @@
   --border-color: #ececf2;
 }
 
-/* ===== Hero ===== */
-.candidates-hero {
-  background: #ffffff;
-  padding: 100px 20px;
-  text-align: center;
-  border-bottom: 1px solid var(--border-color);
-}
-.candidates-hero h1 {
-  max-width: 900px;
-  margin: 0 auto;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--text-strong);
-  line-height: 1.3;
-}
-.candidates-hero .highlight {
-  color: var(--brand-primary);
-}
-
-/* ===== Testimonial ===== */
-.testimonial {
-  background: var(--bg-light);
-  padding: 60px 20px;
-  text-align: center;
-}
-.testimonial blockquote {
-  font-size: 1.4rem;
-  font-style: italic;
-  color: var(--text-strong);
-  max-width: 800px;
-  margin: 0 auto;
-  border-left: 6px solid var(--brand-primary);
-  padding-left: 20px;
-  line-height: 1.6;
-}
-
 /* ===== Guidance Section ===== */
 .guidance {
   padding: 80px 20px;
-  background: #fff;
+  background-color: var(--bg-light);
+  padding-bottom: 0;
 }
 .guidance-inner {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
-  text-align: center;
 }
 .guidance h2 {
   font-size: 2rem;
@@ -66,6 +30,28 @@
 }
 .guidance .btn {
   margin-top: 1rem;
+  justify-self: center;
+}
+
+body > section.guidance > div > p:nth-child(3){
+  margin-bottom: 0;
+}
+
+/* ===== Testimonial ===== */
+.testimonial {
+  background: var(--bg-light);
+  padding: 60px 20px;
+  text-align: center;
+}
+.testimonial blockquote {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--text-strong);
+  max-width: 1100px;
+  margin: 0 auto;
+  border-left: 6px solid var(--brand-primary);
+  padding-left: 20px;
+  line-height: 1.6;
 }
 
 /* ===== About Candidates ===== */
@@ -74,7 +60,7 @@
   background: var(--bg-light);
 }
 .about-inner {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 .about-inner h2 {
@@ -95,7 +81,7 @@
   background: #fff;
 }
 .help-inner {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 .help-inner h2 {

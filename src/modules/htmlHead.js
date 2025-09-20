@@ -80,7 +80,8 @@ function injectHeader() {
         </div>
 
         <ul class="nav-links">
-          <li><a href="#">Join Us</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Jobs</a></li>
           <li><a href="/candidates.html">Candidates</a></li>
           <li><a href="#">Clients</a></li>
           <li><a href="/contact.html">Contact Us</a></li>
