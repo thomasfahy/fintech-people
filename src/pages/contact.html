@@ -6,8 +6,57 @@
     <title>Customer Name | Contact</title>
 </head>
 <body>
-  <div class="main-content">
-
-  </div>
+  <section class="cv-drop">
+    <div class="cv-drop-inner">
+      <h2>Drop Your CV</h2>
+        <div class="cv-icon">
+          <img src="/src/images/cv.svg" alt="Upload your CV">
+        </div>
+      <p>
+        Looking for your next role in FinTech? Upload your CV here and our team will be in touch
+        to connect you with exciting opportunities.
+      </p>
+      <label class="cv-upload">
+        <input type="file" hidden>
+        <span class="btn btn-primary">Upload CV</span>
+      </label>
+    </div>
+  </section>
+  <section class="contact">
+    <div class="contact-inner">
+      <div class="contact-header">
+        <h1>Start the <span class="highlight">CONVERSATION.</span></h1>
+        <p>
+          To learn more about how FinTech People can help you, contact us. <br>
+          If you are looking to add new talent to your team, search for a new job in the FinTech industry
+          or find out more about what we do, please get in touch with us here. <br>
+          We can't wait to hear from you!
+        </p>
+      </div>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="company-name">Company Name</label>
+          <input type="text" id="company-name" placeholder="Enter your company name">
+        </div>
+        <div class="form-group">
+          <label for="contact-number">Contact Number</label>
+          <input type="text" id="contact-number" placeholder="Enter your contact number" required>
+        </div>
+        <div class="form-group">
+          <label for="email-address">Email Address</label>
+          <input type="email" id="email-address" placeholder="Enter your email address" required>
+        </div>
+        <div class="form-group full">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Write your message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
 </body>
 </html>

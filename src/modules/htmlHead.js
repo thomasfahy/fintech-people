@@ -73,9 +73,9 @@ function injectHeader() {
         </div>
         <ul class="nav-links">
           <li><a href="#">Join Us</a></li>
-          <li><a href="#">Candidates</a></li>
+          <li><a href="/candidates.html">Candidates</a></li>
           <li><a href="#">Clients</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
         </ul>
       </nav>
     </header>

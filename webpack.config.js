@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     index: "./src/scripts/index.js",
     htmlHead: "./src/modules/htmlHead.js",
-    contact: "./src/modules/contact.js",
+    contact: "./src/scripts/contact.js",
     dashboard: "./src/scripts/dashboard.js",
     },
   output: {
@@ -43,6 +43,11 @@ module.exports = {
       template: "./src/pages/fintechadmin.html",
       chunks: ["dashboard"],
       filename: "fintechadmin.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/candidates.html",
+      chunks: ["htmlHead"],
+      filename: "candidates.html",
     }),
   ],
   module: {
