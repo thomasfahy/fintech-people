@@ -7,6 +7,10 @@
   --card-border: #ececf2;
 }
 
+.jobs-page{
+  max-width: 100%;
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -104,5 +108,15 @@ body {
   color: #fff;
   border: 2px solid var(--brand-secondary);
   transform: translateY(-2px) scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .jobs-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    margin: 0 auto;
+    padding: 20px;
+  }
 }
 

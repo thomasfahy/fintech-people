@@ -50,36 +50,60 @@ function injectAnalytics(gaId) {
 injectAnalytics(googleTag); //INSERT GOOGLE TAG HERE
 
 
+// ================== VIEWPORT META ======================
+function injectViewport() {
+  if (typeof document === 'undefined') return;
+
+  let viewportMeta = document.querySelector('meta[name="viewport"]');
+  if (!viewportMeta) {
+    viewportMeta = document.createElement('meta');
+    viewportMeta.name = 'viewport';
+    viewportMeta.content = 'width=device-width, initial-scale=1.0';
+    document.head.appendChild(viewportMeta);
+  } else {
+    // Ensure it's set correctly (overwrite old/legacy values)
+    viewportMeta.setAttribute('content', 'width=device-width, initial-scale=1.0');
+  }
+}
+injectViewport();
+
+
 // ================== WEBSITE HEADER ======================
 
 function injectHeader() {
   if (typeof document === 'undefined') return;
-  if (document.querySelector('.site-header')) return;
+  if (document.querySelector('.desktop-header') || document.querySelector('.mobile-header')) return;
 
-  // 🔧 Custom Header Settings
-  const companyName   = "Business Name";
-  const logoAlt       = `${companyName} Logo`;
-  const phoneNumber   = "07777 777666";
-  const facebookUrl   = "https://www.facebook.com/businessname";
-  const instagramUrl  = "https://www.instagram.com/businessname";
+  const companyName = "FinTech People";
+  const logoAlt = `${companyName} Logo`;
 
   const headerHTML = `
-    <header class="site-header">
+    <!-- ================== DESKTOP HEADER ================== -->
+    <header class="desktop-header">
       <nav class="nav-container">
         <div class="logo">
-          <a href="/">
-            <img src="${logo}" alt="${logoAlt}">
-          </a>
+          <a href="/"><img src="${logo}" alt="${logoAlt}"></a>
         </div>
-
-        <!-- Hamburger Icon (only visible on mobile) -->
-        <div class="menu-toggle" id="mobile-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
         <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/jobs.html">Jobs</a></li>
+          <li><a href="/candidates.html">Candidates</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ================== MOBILE HEADER ================== -->
+    <header class="mobile-header">
+      <div class="mobile-top">
+        <button class="mobile-burger" aria-label="Toggle menu">&#9776;</button>
+        <a href="/" class="mobile-logo-link">
+          <img src="${logo}" alt="${logoAlt}" class="mobile-logo">
+        </a>
+      </div>
+      <nav class="mobile-nav">
+        <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/jobs.html">Jobs</a></li>
           <li><a href="/candidates.html">Candidates</a></li>
