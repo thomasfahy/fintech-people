@@ -5,7 +5,7 @@ const prevBtn = document.querySelector('.carousel-btn.prev');
 const nextBtn = document.querySelector('.carousel-btn.next');
 
 function loadJobs() {
-  fetch("http://localhost:3001/api/jobs")
+  fetch("/api/jobs")
     .then(res => res.json())
     .then(data => {
       const latestJobs = data
@@ -64,7 +64,7 @@ window.addEventListener('resize', () => {
 });
 
 
-fetch("http://localhost:3001/api/jobs")
+fetch("/api/jobs")
   .then(res => res.json())
   .then(data => console.log("Job Listings:", data))
   .catch(err => console.error("Error fetching jobs:", err));

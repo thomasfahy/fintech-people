@@ -53,7 +53,7 @@ function deleteJob(id) {
 }
 
 window.markInactive = function (id) {
-  fetch(`http://localhost:3001/api/admin/jobs/${id}/inactive`, {
+  fetch(`/api/admin/jobs/${id}/inactive`, {
     method: "PATCH",
   })
     .then(res => {
@@ -65,7 +65,7 @@ window.markInactive = function (id) {
 };
 
 window.deleteJob = function (id) {
-  fetch(`http://localhost:3001/api/admin/jobs/${id}`, {
+  fetch(`/api/admin/jobs/${id}`, {
     method: "DELETE",
   })
     .then(res => {
