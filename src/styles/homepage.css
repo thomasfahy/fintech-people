@@ -313,7 +313,7 @@
 }
 
 .role-card img {
-  max-width: 50%;           /* keep icon proportional */
+  max-width: 65%;           /* keep icon proportional */
   height: auto;
   display: block;
   margin: 0 auto;
@@ -322,6 +322,15 @@
 .role-card span {
   display: block;
   margin-top: auto 0;
+}
+.role-card {
+  text-decoration: none;
+}
+.role-card span {
+  color: var(--text-strong);
+}
+.role-card:hover span {
+  color: var(--brand-primary);
 }
 
 
