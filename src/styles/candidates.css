@@ -1,16 +1,16 @@
 :root {
-  --brand-primary: #DD20C6;
-  --brand-primary-600: #C017AD;
-  --text-strong: #0B1220;
-  --text-muted: #3E4B63;
-  --bg-light: #f9f9fb;
-  --border-color: #ececf2;
+  --brand-primary: #12f9f3;
+  --brand-primary-600: #12f9f3;
+  --text-strong: #dfe7ef;
+  --text-muted: #9fb2c5;
+  --bg-light: #0b1220; /* dark navy */
+  --border-color: rgba(255,255,255,0.08);
 }
 
 /* ===== Guidance Section ===== */
 .guidance {
   padding: 80px 20px;
-  background-color: var(--bg-light);
+  background-color: #101a33;
   padding-bottom: 0;
 }
 .guidance-inner {
@@ -39,7 +39,7 @@ body > section.guidance > div > p:nth-child(3){
 
 /* ===== Testimonial ===== */
 .testimonial {
-  background: var(--bg-light);
+  background: #101a33;
   padding: 60px 20px;
   text-align: center;
 }
@@ -52,6 +52,8 @@ body > section.guidance > div > p:nth-child(3){
   border-left: 6px solid var(--brand-primary);
   padding-left: 20px;
   line-height: 1.6;
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
 }
 
 /* ===== About Candidates ===== */
@@ -78,7 +80,7 @@ body > section.guidance > div > p:nth-child(3){
 /* ===== How Help Section ===== */
 .how-help {
   padding: 100px 20px;
-  background: #fff;
+  background: #101a33;
 }
 .help-inner {
   max-width: 1100px;
@@ -98,7 +100,7 @@ body > section.guidance > div > p:nth-child(3){
 
 /* ===== Call To Action (CV) ===== */
 .cta-cv {
-  background: #fff; /* clean white background */
+  background: #101a33;
   color: var(--text-strong);
   text-align: center;
   padding: 80px 20px;
@@ -124,15 +126,15 @@ body > section.guidance > div > p:nth-child(3){
   color: var(--text-muted);
 }
 
-/* Upload Button - dark with subtle accent */
+/* Upload Button */
 .cv-upload input {
   display: none;
 }
 
 .cv-upload .btn {
-  background: var(--brand-primary); /* magenta accent */
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-primary-600));
   border-color: var(--brand-primary);
-  color: #fff;
+  color: #032323;
   font-weight: 600;
   padding: 0.9rem 1.6rem;
   border-radius: 50px;
@@ -141,8 +143,6 @@ body > section.guidance > div > p:nth-child(3){
 }
 
 .cv-upload .btn:hover {
-  background-color: #C017AD;
-  color: #fff;
   transform: translateY(-2px);
 }
 
@@ -159,14 +159,12 @@ body > section.guidance > div > p:nth-child(3){
   border: 1px solid transparent;
 }
 .btn-primary {
-  background: var(--brand-primary);
-  color: #fff;
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-primary-600));
+  color: #032323;
   border: 1px solid var(--brand-primary);
-  box-shadow: 0 6px 14px rgba(221,32,198,0.25);
+  box-shadow: 0 6px 14px rgba(18,249,243,0.25);
 }
 .btn-primary:hover {
-  background: var(--brand-primary-600);
-  border-color: var(--brand-primary-600);
   transform: translateY(-1px);
-  box-shadow: 0 10px 18px rgba(221,32,198,0.28);
+  box-shadow: 0 10px 18px rgba(18,249,243,0.28);
 }

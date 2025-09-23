@@ -1,10 +1,10 @@
 :root {
-  --brand-primary: #DD20C6;
-  --brand-primary-600: #C017AD;
-  --text-strong: #0B1220;
-  --text-muted: #3E4B63;
-  --bg-light: #f9f9fb;
-  --border-color: #ececf2;
+  --brand-primary: #12f9f3;
+  --brand-primary-600: #12f9f3;
+  --text-strong: #dfe7ef;
+  --text-muted: #9fb2c5;
+  --bg-light: #0b1220; /* dark navy */
+  --border-color: rgba(255,255,255,0.08);
 }
 
 /* ===== CV Drop Section ===== */
@@ -34,7 +34,7 @@
   width: 80px;
   height: auto;
   display: inline-block;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.08));
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25));
   margin-top: 20px;
 }
 
@@ -51,27 +51,36 @@
 
 .cv-upload .btn {
   cursor: pointer;
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-primary-600));
+  border-color: var(--brand-primary);
+  color: #032323;
+  font-weight: 600;
+}
+
+.cv-upload .btn:hover {
+  background-color: var(--brand-primary-600);
+  color: #032323;
+  transform: translateY(-2px);
 }
 
 /* ===== Contact Section ===== */
 .contact {
   padding-top: 75px;
   padding-bottom: 75px;
-  background: #ffffff;
+  background: #101a33;
 }
 
 .contact-inner {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px; /* 👈 add horizontal padding */
+  padding: 0 20px;
 }
 
 @media (max-width: 768px) {
   .contact-inner {
-    padding: 0 15px; /* tighter on small screens */
+    padding: 0 15px;
   }
 }
-
 
 .contact-header h1 {
   font-size: 2.2rem;
@@ -81,7 +90,10 @@
 }
 
 .contact-header .highlight {
-  color: var(--brand-primary);
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-primary-600));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .contact-header p {
@@ -104,11 +116,11 @@
     flex-direction: column;
   }
   .form-group.full {
-    grid-column: span 1; /* no need to span both */
+    grid-column: span 1;
   }
   .contact-form button {
     grid-column: span 1;
-    width: 100%; /* full width button */
+    width: 100%;
   }
 }
 
@@ -134,12 +146,15 @@ input, textarea {
   border-radius: 8px;
   font-size: 1rem;
   font-family: inherit;
-  transition: border-color 0.2s ease;
+  background: rgba(255,255,255,0.04);
+  color: var(--text-strong);
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 input:focus, textarea:focus {
   outline: none;
   border-color: var(--brand-primary);
+  background: rgba(18,249,243,0.06);
 }
 
 textarea {
@@ -151,7 +166,7 @@ textarea {
   justify-self: center;
 }
 
-/* ===== Buttons (reuse styles) ===== */
+/* ===== Buttons ===== */
 .btn {
   display: inline-block;
   padding: 0.95rem 1.6rem;
@@ -164,10 +179,10 @@ textarea {
 }
 
 .btn-primary {
-  background: var(--brand-primary);
-  color: #fff;
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-primary-600));
+  color: #032323;
   border: 1px solid var(--brand-primary);
-  box-shadow: 0 6px 14px rgba(221,32,198,0.25);
+  box-shadow: 0 6px 14px rgba(18,249,243,0.25);
   justify-self: center;
 }
 
@@ -175,6 +190,5 @@ textarea {
   background: var(--brand-primary-600);
   border-color: var(--brand-primary-600);
   transform: translateY(-1px);
-  box-shadow: 0 10px 18px rgba(221,32,198,0.28);
+  box-shadow: 0 10px 18px rgba(18,249,243,0.28);
 }
-
