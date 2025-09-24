@@ -1,3 +1,4 @@
+require("dotenv").config();
 // ========= Imports ==========
 const express = require("express");
 const cors = require("cors");
@@ -5,7 +6,7 @@ const path = require("path");
 const mysql = require("mysql2");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-require("dotenv").config();
+
 
 // ========= Config ==========
 
@@ -43,6 +44,9 @@ const db = mysql.createPool({
   connectionLimit: 10,
   queueLimit: 0,
 });
+
+console.log("PORT:", process.env.PORT);
+console.log("DB_HOST:", process.env.DB_HOST);
 
 // ============================= API CALLS ==================================
 

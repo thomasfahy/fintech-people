@@ -180,6 +180,15 @@ ul { list-style: none; }
   color: var(--link-hover);
 }
 
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav.open {
+  display: block;
+}
+
+
 /* ================== RESPONSIVE TOGGLE ================== */
 
 /* Mobile view */

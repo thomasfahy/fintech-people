@@ -264,6 +264,10 @@
   .testimonial-about {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 40px 20px;
+  }
+  .testimonial{
+    margin-bottom: 25px;
   }
 }
 

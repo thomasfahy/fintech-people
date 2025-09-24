@@ -114,7 +114,17 @@ function injectHeader() {
     </header>
   `;
 
-  document.body.insertAdjacentHTML('afterbegin', headerHTML);
+  document.body.insertAdjacentHTML("afterbegin", headerHTML);
+
+  // ====== TOGGLE MENU ======
+  const burger = document.querySelector(".mobile-burger");
+  const mobileNav = document.querySelector(".mobile-nav");
+
+  if (burger && mobileNav) {
+    burger.addEventListener("click", () => {
+      mobileNav.classList.toggle("open");
+    });
+  }
 }
 
 if (document.readyState === 'loading') {
